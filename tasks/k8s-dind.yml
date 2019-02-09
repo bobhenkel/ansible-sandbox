@@ -4,9 +4,10 @@
     
     chmod +x dind-cluster-v1.13.sh
     ./dind-cluster-v1.13.sh up
-    echo 'PATH="$HOME/.kubeadm-dind-cluster:$PATH"' >>~/.profile
-    source ~/.profile
-
-    kubectl get nodes
   become: yes
   become_user: sandbox
+  
+- name: Move kubectl
+  shell: |
+    mv kubectl /usr/local/bin
+    kubectl get nodes
