@@ -8,4 +8,4 @@
   - "vars/main.yml"
 
   tasks:
-    - include: tasks/non-packages.yml
+    - include: tasks/docker-engine.yml
