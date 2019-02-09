@@ -1,0 +1,10 @@
+- name: Install kubeadm-dind-cluster
+  shell: |
+    wget https://github.com/kubernetes-sigs/kubeadm-dind-cluster/releases/download/v0.1.0/dind-cluster-v1.13.sh
+    
+    chmod +x dind-cluster-v1.13.sh
+    ./dind-cluster-v1.13.sh up
+    export PATH="$HOME/.kubeadm-dind-cluster:$PATH"
+    kubectl get nodes
+  become: yes
+  become_user: sandbox
