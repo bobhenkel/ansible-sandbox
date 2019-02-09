@@ -1,0 +1,4 @@
+- name: Execute ansible via ansible-pull
+  shell: |
+    ansible-pull --extra-vars "user=sandbox" --verbose -U https://github.com/bobhenkel/ansible-sandbox.git
+
