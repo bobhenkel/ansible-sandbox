@@ -8,5 +8,4 @@
   - "vars/main.yml"
 
   tasks:
-    - include: tasks/users.yml
     - include: tasks/non-packages.yml
