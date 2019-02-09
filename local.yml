@@ -8,5 +8,6 @@
   - "vars/main.yml"
 
   tasks:
+    - include: tasks/upgrade-system.yml
     - include: tasks/docker-engine.yml
     - include: tasks/k8s-dind.yml
