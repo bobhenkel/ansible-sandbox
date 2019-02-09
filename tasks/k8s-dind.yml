@@ -4,7 +4,9 @@
     
     chmod +x dind-cluster-v1.13.sh
     ./dind-cluster-v1.13.sh up
-    export PATH="$HOME/.kubeadm-dind-cluster:$PATH"
+    echo 'export PATH="$HOME/.kubeadm-dind-cluster:$PATH"' >>~/.profile
+    source ~/.profile
+
     kubectl get nodes
   become: yes
   become_user: sandbox
