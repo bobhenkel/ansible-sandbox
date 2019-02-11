@@ -13,3 +13,5 @@
     - include: tasks/add-users.yml
     - include: tasks/docker-engine.yml
     - include: tasks/k8s-dind.yml
+    - include: tasks/git.yml
+    - include : midnight-commander.yml
