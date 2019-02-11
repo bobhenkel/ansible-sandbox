@@ -6,3 +6,5 @@
   file:
     path: /home/sandbox/.ssh
     state: directory
+  become: yes
+  become_user: sandbox
